@@ -1,9 +1,9 @@
-// package main
+package main
 
-// import (
-// 	"fmt"
-// 	"strconv"
-// )
+import (
+	"fmt"
+	"strconv"
+)
 
 func fizzBuzz(n int) []string {
 	strs := make([]string, n)
@@ -23,7 +23,7 @@ func fizzBuzz(n int) []string {
 	return strs
 }
 
-// func main() {
-// 	arr := fizzBuzz(15)
-// 	fmt.Println(arr)
-// }
+func main() {
+	arr := fizzBuzz(15)
+	fmt.Println(arr)
+}

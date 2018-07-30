@@ -6,10 +6,9 @@ import (
 
 func BinarySearch(arr []int, key int) (index int) {
 	l, h := 0, len(arr)-1
-	mid := l + (h-l)/2
-	fmt.Println(l, h)
+	//fmt.Println(l, h,mid)
 	for l <= h {
-		// fmt.Println(l)
+		mid := l + (h-l)/2
 		if arr[mid] == key {
 			return mid
 		} else if arr[mid] > key {
@@ -25,5 +24,5 @@ func BinarySearch(arr []int, key int) (index int) {
 
 func main() {
 	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	fmt.Println(BinarySearch(arr, 4))
+	fmt.Println(BinarySearch(arr, 8))
 }

@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func reveserString(s string) string {
+func reverseString(s string) string {
 	chars := []rune(s)
 	l := len(s)
 	for i, v := range s {
@@ -15,7 +15,7 @@ func reveserString(s string) string {
 
 }
 func titleToNumber(s string) int {
-	s = reveserString(s)
+	s = reverseString(s)
 	var sum float64
 	for i, v := range s {
 		sum += float64((int(v) - 64)) * math.Pow(float64(26), float64(i))

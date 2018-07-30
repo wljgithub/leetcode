@@ -27,3 +27,16 @@ leetcode 上的一些算法题,积累多了估计会做一个分类
 | Easy |  [258. Add Digits](https://leetcode.com/problems/add-digits/description/)                                                                | [go](https://github.com/wljgithub/leetcode-/blob/master/%E6%95%B0%E5%AD%A6/Easy-258.AddDigits.go) [python]() |
 | Easy |  []()                                                                | [go]() [python]() |
 | Easy |  []()                                                                | [go]() [python]() |
+
+
+# 双指针
+| Easy | [--283. Move Zeroes](https://leetcode.com/problems/move-zeroes/description/) | [go]() [python]() |
+| Easy | [167. Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)                                                                       | [go]() [python]() |
+| Easy | []()                                                                       | [go]() [python]() |
+| Easy | []()                                                                       | [go]() [python]() |
+| Easy |  []()                                                                | [go]() [python]() |
+| Easy |  []()                                                                | [go]() [python]() |
+| Easy |  []()                                                                | [go]() [python]() |
+| Easy |  []()                                                                | [go]() [python]() |
+
+
