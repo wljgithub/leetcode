@@ -1,6 +1,11 @@
 # leetcode
 leetcode 上的一些算法题,积累多了估计会做一个分类
 
+# 数组
+
+| 难度 | 题目 | 实现语言 |
+|------|------|----------|
+|      |      |          |
 
 # 字符串处理
 
@@ -16,6 +21,7 @@ leetcode 上的一些算法题,积累多了估计会做一个分类
 |------|------------------------------------------------------------------------|-------------------|
 | Easy | [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/) | [go](https://github.com/wljgithub/leetcode-/blob/master/%E5%85%B6%E4%BB%96/AC-Easy-412.FizzBuzz.go) [python]() |
 |      |                                                                        |                   |
+
 
 &nbsp;
 # 数学
