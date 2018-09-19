@@ -3,7 +3,6 @@ package main
 //链表实现
 import (
 	"fmt"
-	"os"
 )
 
 //定义错误常量
@@ -22,7 +21,7 @@ type LinkNode struct {
 
 //函数接口
 type LinkNoder interface {
-	Add(head *LinkNode, new *LinkNode)              //后面添加
+	Add(head *LinkNode, Data Element)               //后面添加
 	Delete(head *LinkNode, index int)               //删除指定index位置元素
 	Insert(head *LinkNode, index int, data Element) //在指定index位置插入元素
 	GetLength(head *LinkNode) int                   //获取长度
@@ -40,11 +39,9 @@ func Add(head *LinkNode, data Element) {
 	point.Nest = &node //赋值
 	node.Data = data
 
-	head.Data = Element(GetLength(head)) //打印全部的数据
-
-	if GetLength(head) > 1 {
-		Traverse(head)
-	}
+	// if GetLength(head) > 1 {
+	// 	Traverse(head)
+	// }
 
 }
 
@@ -59,6 +56,7 @@ func Delete(head *LinkNode, index int) Element {
 		for i := 0; i < index-1; i++ {
 			point = point.Nest //移位
 		}
+
 		point.Nest = point.Nest.Nest //赋值
 		data := point.Nest.Data
 		return data
@@ -84,8 +82,12 @@ func Insert(head *LinkNode, index int, data Element) {
 
 //获取长度 头结点
 func GetLength(head *LinkNode) int {
+	if head == nil {
+		return 0
+	}
+
+	var length = 1
 	point := head
-	var length int
 	for point.Nest != nil {
 		length++
 		point = point.Nest
@@ -113,6 +115,21 @@ func Search(head *LinkNode, data Element) {
 	}
 }
 
+func Search2(head *LinkNode, data Element) (ele Element) {
+
+	point := head
+	for index := 0; index < GetLength(head); index++ {
+		if point.Data == data {
+			fmt.Printf("the element %d exists,and index :%d", data, index)
+			ele = data
+			return
+		}
+		point = point.Nest
+	}
+	fmt.Println("element not exists!")
+	return
+}
+
 //获取data 头结点 index位置
 func GetData(head *LinkNode, index int) Element {
 	point := head
@@ -129,30 +146,29 @@ func GetData(head *LinkNode, index int) Element {
 
 //遍历 头结点
 func Traverse(head *LinkNode) {
-	point := head.Nest
+	point := head
 	for point.Nest != nil {
 		fmt.Println(point.Data)
 		point = point.Nest
 	}
-	fmt.Println("Traverse OK!")
 }
 
 //主函数测试
 func main() {
-	var head LinkNode = LinkNode{Data: 0, Nest: nil}
-	head.Data = 0
-	var nodeArray []Element
-	for i := 0; i < 10; i++ {
-		nodeArray = append(nodeArray, Element(i+1+i*100))
-		Add(&head, nodeArray[i])
 
+	head := LinkNode{Data: 0, Nest: nil}
+
+	for i := 1; i < 10; i++ {
+
+		Add(&head, Element(i))
+		fmt.Println("add element:", i)
 	}
 
-	Delete(&head, 3)
-	Search(&head, 2032)
-	Insert(&head, 23, 10010)
-	Traverse(&head)
-	fmt.Println("data is", GetData(&head, 6))
-	fmt.Println("length:", GetLength(&head))
-	os.Exit(0)
+	Delete(&head, 9)
+	fmt.Println("linkList len:", GetLength(&head))
+
+	Search2(&head, Element(9))
+
+	// Delete(&head, 10)
+	// fmt.Println("linkList len:", GetLength(&head))
 }
