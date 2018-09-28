@@ -38,7 +38,6 @@ func power(num,p int) int{
 		temp *=num
 	}
 	return temp
-
 }
 func main()  {
 	fmt.Println(reverse(123))
