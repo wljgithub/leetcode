@@ -57,10 +57,15 @@ func Delete(head *LinkNode, index int) Element {
 			point = point.Nest //移位
 		}
 
-		point.Nest = point.Nest.Nest //赋值
-		data := point.Nest.Data
-		return data
+		if point.Nest.Nest != nil {
+
+			point.Nest = point.Nest.Nest //赋值
+			data := point.Nest.Data
+			return data
+		}
 	}
+	fmt.Println("delete element failed!")
+	return ERROR
 }
 
 //插入 头结点 index位置 data元素
@@ -117,14 +122,20 @@ func Search(head *LinkNode, data Element) {
 
 func Search2(head *LinkNode, data Element) (ele Element) {
 
+	if head == nil {
+		return
+	}
+
 	point := head
 	for index := 0; index < GetLength(head); index++ {
 		if point.Data == data {
 			fmt.Printf("the element %d exists,and index :%d", data, index)
-			ele = data
-			return
+			return data
 		}
-		point = point.Nest
+		if point.Nest != nil {
+
+			point = point.Nest
+		}
 	}
 	fmt.Println("element not exists!")
 	return
@@ -163,12 +174,12 @@ func main() {
 		Add(&head, Element(i))
 		fmt.Println("add element:", i)
 	}
+	// Search2(&head, Element(9))
 
-	Delete(&head, 9)
-	fmt.Println("linkList len:", GetLength(&head))
+	Delete(&head, 8)
+	Search2(&head, Element(8))
 
-	Search2(&head, Element(9))
+	Insert(&head, 8, Element(8))
+	fmt.Println("\n", GetLength(&head))
 
-	// Delete(&head, 10)
-	// fmt.Println("linkList len:", GetLength(&head))
 }

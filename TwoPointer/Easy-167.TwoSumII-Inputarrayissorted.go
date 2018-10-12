@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func twoSum(numbers []int, target int) []int {
 	l, h := 0, len(numbers)-1
@@ -10,12 +8,16 @@ func twoSum(numbers []int, target int) []int {
 		sum := numbers[l]+numbers[h]
 		if  sum == target {
 			return []int{l, h}
-		}else if sum 
+		}
 
 	}
-
+	return []int{}
 }
 
 func main() {
-
+	a,b:=1,2
+	a=a^b
+	b=a^b
+	a=a^b
+	fmt.Println(a,b)
 }

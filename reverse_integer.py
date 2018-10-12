@@ -46,3 +46,8 @@ class Solution:
 
 sl=Solution()
 print(sl.reverse(0))
+print(sl.reverse(101))
+print(sl.reverse(100))
+print(sl.reverse(-101))
+print(sl.reverse(-100))
+print(int("-001"))
