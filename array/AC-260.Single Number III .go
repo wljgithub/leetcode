@@ -27,4 +27,5 @@ func main() {
 	fmt.Println(3/2)
 	var u uint8 =1
 	fmt.Println(^u)
+	fmt.Println(arr[:1])
 }
