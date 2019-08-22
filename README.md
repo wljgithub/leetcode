@@ -49,9 +49,11 @@ leetcode 上的一些算法题,积累多了估计会做一个分类
  -->
 
 
-| # |      Title      | Solution | Difficulty |
-|---|-----------------|----------|------------|
-| 1 |                 |          |            |
-| 2 | Add Two Numbers | [go]()   | Medium     |
+| #  |       Title       |                               Solution                               | Difficulty |
+|----|-------------------|----------------------------------------------------------------------|------------|
+|  1 | Two Sum           | [go](https://github.com/wljgithub/leetcode/blob/master/solved/1.go)  | Easy       |
+|  2 | Add Two Numbers   | [go]()                                                               | Medium     |
+| 20 | Valid Parentheses | [go](https://github.com/wljgithub/leetcode/blob/master/solved/20.go) | Easy       |
 
 
+https://github.com/wljgithub/leetcode/blob/master/solved/1.go
