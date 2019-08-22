@@ -49,11 +49,14 @@ leetcode 上的一些算法题,积累多了估计会做一个分类
  -->
 
 
-| #  |       Title       |                               Solution                               | Difficulty |
-|----|-------------------|----------------------------------------------------------------------|------------|
-|  1 | Two Sum           | [go](https://github.com/wljgithub/leetcode/blob/master/solved/1.go)  | Easy       |
-|  2 | Add Two Numbers   | [go]()                                                               | Medium     |
-| 20 | Valid Parentheses | [go](https://github.com/wljgithub/leetcode/blob/master/solved/20.go) | Easy       |
+| #  |         Title          |                               Solution                               | Difficulty |
+|----|------------------------|----------------------------------------------------------------------|------------|
+|  1 | Two Sum                | [go](https://github.com/wljgithub/leetcode/blob/master/solved/1.go)  | Easy       |
+|  2 | Add Two Numbers        | [go]()                                                               | Medium     |
+| 20 | Valid Parentheses      | [go](https://github.com/wljgithub/leetcode/blob/master/solved/20.go) | Easy       |
+| 21 | Merge Two Sorted Lists | [go](https://github.com/wljgithub/leetcode/blob/master/solved/21.go) | Easy       |
+| 53 | Maximum Subarray       | [go](https://github.com/wljgithub/leetcode/blob/master/solved/53.go) | Easy       |
+|    |                        |                                                                      |            |
 
 
 https://github.com/wljgithub/leetcode/blob/master/solved/1.go
